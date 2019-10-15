@@ -1,0 +1,10 @@
+C:\Users\50575\source\repos\Comedor\Comedor\bin\Debug\Comedor.exe.config
+C:\Users\50575\source\repos\Comedor\Comedor\bin\Debug\Comedor.exe
+C:\Users\50575\source\repos\Comedor\Comedor\bin\Debug\Comedor.pdb
+C:\Users\50575\source\repos\Comedor\Comedor\obj\Debug\Comedor.csprojAssemblyReference.cache
+C:\Users\50575\source\repos\Comedor\Comedor\obj\Debug\Comedor.Form1.resources
+C:\Users\50575\source\repos\Comedor\Comedor\obj\Debug\Comedor.Principal.resources
+C:\Users\50575\source\repos\Comedor\Comedor\obj\Debug\Comedor.Properties.Resources.resources
+C:\Users\50575\source\repos\Comedor\Comedor\obj\Debug\Comedor.csproj.GenerateResource.cache
+C:\Users\50575\source\repos\Comedor\Comedor\obj\Debug\Comedor.exe
+C:\Users\50575\source\repos\Comedor\Comedor\obj\Debug\Comedor.pdb
