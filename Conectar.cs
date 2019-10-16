@@ -15,12 +15,12 @@ namespace Comedor
 
         public SqlConnection connect = new SqlConnection();
 
-        public Conectar(String user, String pass)
+        public Conectar()
         {
             try
             {
 
-                connect = new SqlConnection("Server=DESKTOP-SAH83BP;Database=master;UID=" + user + ";PWD=" + pass);
+                connect = new SqlConnection("Server=DESKTOP-SAH83BP;Database=Comedor;integrated security = true");
                 connect.Open();
             }
             catch (Exception)
@@ -30,18 +30,46 @@ namespace Comedor
             }
         }
 
-        public void listarClientes(DataGridView GridView1)
+        public int iniciarSesion(String user,String pass)
+        {
+
+
+
+            SqlCommand cmd = new SqlCommand();
+
+            SqlParameter[] param = new SqlParameter[2];
+            param[0] = new SqlParameter("@user", SqlDbType.VarChar);
+            param[0].Value = user;
+            param[1] = new SqlParameter("@pass", SqlDbType.VarChar);
+            param[1].Value = pass;
+            
+
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "iniciar";
+            cmd.Connection = connect;
+            cmd.Parameters.AddRange(param);
+
+            DataSet ds = new DataSet();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            da.Fill(ds);
+            Console.WriteLine("antes");
+            Console.WriteLine(cmd.ExecuteScalar());
+            return (int)cmd.ExecuteScalar();
+        }
+
+        public void listarUsuarios(DataGridView GridView1)
         {
 
             SqlCommand cmd = new SqlCommand();
-            SqlDataReader leer;
+         
 
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = "MostrarUsuarios";
             cmd.Connection = connect;
 
 
-            DataSet ds = new DataSet();
+          
             SqlDataAdapter da = new SqlDataAdapter(cmd);
 
             DataTable dt = new DataTable();
@@ -51,7 +79,7 @@ namespace Comedor
 
         }
 
-        public void editarCliente(DataGridView GridView1, int id, String tel, String dir)
+        public void editarUsuario(DataGridView GridView1, int id, String tel, String dir)
         {
 
             SqlCommand cmd = new SqlCommand();
@@ -78,7 +106,7 @@ namespace Comedor
 
         }
 
-        public void eliminarCliente(int id)
+        public void eliminarUsuario(int id)
         {
             SqlCommand cmd = new SqlCommand();
 
@@ -98,7 +126,7 @@ namespace Comedor
             da.Fill(ds);
         }
 
-        public void insertarCliente(String nombre, String apellido, String contra, String tel, String dir)
+        public void insertarUsuario(String dni, String user,String nombre, String apellido, String contra, String tel, String dir)
         {
 
             Console.WriteLine(contra);
@@ -107,17 +135,21 @@ namespace Comedor
             {
                 SqlCommand cmd = new SqlCommand();
 
-                SqlParameter[] param = new SqlParameter[5];
-                param[0] = new SqlParameter("@Pnombre", SqlDbType.VarChar);
-                param[0].Value = nombre;
-                param[1] = new SqlParameter("@Papellido", SqlDbType.VarChar);
-                param[1].Value = apellido;
-                param[2] = new SqlParameter("@contra", SqlDbType.VarChar);
-                param[2].Value = contra;
-                param[3] = new SqlParameter("@direccion", SqlDbType.VarChar);
-                param[3].Value = dir;
-                param[4] = new SqlParameter("@telefono", SqlDbType.Char);
-                param[4].Value = tel;
+                SqlParameter[] param = new SqlParameter[7];
+                param[0] = new SqlParameter("@dni", SqlDbType.Char);
+                param[0].Value = dni;
+                param[1] = new SqlParameter("@Puser", SqlDbType.VarChar);
+                param[1].Value = user;
+                param[2] = new SqlParameter("@Pnombre", SqlDbType.VarChar);
+                param[2].Value = nombre;
+                param[3] = new SqlParameter("@Papellido", SqlDbType.VarChar);
+                param[3].Value = apellido;
+                param[4] = new SqlParameter("@contra", SqlDbType.VarChar);
+                param[4].Value = contra;
+                param[5] = new SqlParameter("@direccion", SqlDbType.VarChar);
+                param[5].Value = dir;
+                param[6] = new SqlParameter("@telefono", SqlDbType.Char);
+                param[6].Value = tel;
 
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "InsertarUsuario";

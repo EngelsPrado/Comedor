@@ -76,17 +76,40 @@ namespace Comedor
                 return;
             }
 
-            con = new Conectar(textBox1.Text, textBox2.Text);
+            con = new Conectar();
             if (this.con.connect.State == ConnectionState.Open)
             {
 
-                bg.WorkerReportsProgress = true;
-                bg.ProgressChanged += bg_ProgressChanged;
-                bg.DoWork += bg_DoWork;
-                bg.RunWorkerCompleted += bg_RunWorkerCompleted;
-                bg.RunWorkerAsync();
-                label5.Visible = true;
-                progressBar1.Visible = true;
+
+               if(this.con.iniciarSesion(textBox1.Text, textBox2.Text)==1)
+                {
+
+                    bg.WorkerReportsProgress = true;
+                    bg.ProgressChanged += bg_ProgressChanged;
+                    bg.DoWork += bg_DoWork;
+                    bg.RunWorkerCompleted += bg_RunWorkerCompleted;
+                    bg.RunWorkerAsync();
+                    label5.Visible = true;
+                    progressBar1.Visible = true;
+
+                }else
+                {
+                    Cursor.Current = Cursors.Default;
+                    --cont;
+                    MessageBox.Show("Error:usuario o contrasenia incorrecta ", cont + " Intentos restantes");
+                    if (cont == 0)
+                    {
+                        cont = 3;
+                        button1.Enabled = false;
+                        button2.Enabled = false;
+                        Thread.Sleep(3000);
+                        button1.Enabled = true;
+                        button2.Enabled = true;
+
+                    }
+
+
+                }
 
 
 
