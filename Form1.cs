@@ -13,6 +13,8 @@ namespace Comedor
 {
     public partial class Form1 : Form
     {
+
+        Encrypt md5;
         public Form1()
         {
             InitializeComponent();
@@ -79,9 +81,9 @@ namespace Comedor
             con = new Conectar();
             if (this.con.connect.State == ConnectionState.Open)
             {
+                md5 = new Encrypt();
 
-
-               if(this.con.iniciarSesion(textBox1.Text, textBox2.Text)==1)
+               if(this.con.iniciarSesion(textBox1.Text,md5.md5( textBox2.Text))==1)
                 {
 
                     bg.WorkerReportsProgress = true;

@@ -92,3 +92,4 @@ C:\Users\50575\source\repos\Comedor\Comedor\bin\Debug\zh-CHT\Microsoft.ReportVie
 C:\Users\50575\source\repos\Comedor\Comedor\bin\Debug\es\Microsoft.VisualStudio.Data.Services.resources.dll
 C:\Users\50575\source\repos\Comedor\Comedor\bin\Debug\es\Microsoft.VisualStudio.Data.Core.resources.dll
 C:\Users\50575\source\repos\Comedor\Comedor\obj\Debug\Comedor.csproj.CopyComplete
+C:\Users\50575\source\repos\Comedor\Comedor\obj\Debug\Comedor.Facturar.resources

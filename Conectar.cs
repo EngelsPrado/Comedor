@@ -58,6 +58,30 @@ namespace Comedor
             return (int)cmd.ExecuteScalar();
         }
 
+        public void listarPlatos(ComboBox GridView1)
+        {
+
+            SqlCommand cmd = new SqlCommand();
+
+
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "verPlatos";
+            cmd.Connection = connect;
+
+
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            GridView1.DisplayMember = "Nombre";
+            GridView1.ValueMember = "Nombre";
+            GridView1.DataSource = dt;
+
+        }
+
+
+
         public void listarUsuarios(DataGridView GridView1)
         {
 

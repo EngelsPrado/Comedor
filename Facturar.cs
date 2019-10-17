@@ -10,33 +10,31 @@ using System.Windows.Forms;
 
 namespace Comedor
 {
-    public partial class Principal : Form
+    public partial class Facturar : Form
     {
         private Conectar con;
 
-        public Principal()
+        public Facturar()
         {
             InitializeComponent();
+
         }
 
-        public Principal(Conectar con)
+        public Facturar(Conectar con)
         {
             this.con = con;
             InitializeComponent();
+            cargarPlatos();
         }
 
-        private void Principal_Load(object sender, EventArgs e)
+        private void cargarPlatos()
         {
+            con.listarPlatos(comboBox1);
 
         }
 
-        private void facturarToolStripMenuItem_Click(object sender, EventArgs e)
+        private void Facturar_Load(object sender, EventArgs e)
         {
-
-            Facturar f = new Facturar(con);
-            f.MdiParent = this;
-            f.Show();
-       
 
         }
     }
