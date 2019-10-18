@@ -58,6 +58,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ComedorDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ComedorDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ComedorDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ComedorDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ComedorDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ComedorDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ComedorDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ComedorDataSet3.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Conectar.cs" />
     <Compile Include="Encrypt.cs" />
     <Compile Include="Facturar.cs">
@@ -99,6 +119,50 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="ComedorDataSet.xsc">
+      <DependentUpon>ComedorDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ComedorDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ComedorDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ComedorDataSet.xss">
+      <DependentUpon>ComedorDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ComedorDataSet1.xsc">
+      <DependentUpon>ComedorDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ComedorDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ComedorDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ComedorDataSet1.xss">
+      <DependentUpon>ComedorDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ComedorDataSet2.xsc">
+      <DependentUpon>ComedorDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="ComedorDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ComedorDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ComedorDataSet2.xss">
+      <DependentUpon>ComedorDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="ComedorDataSet3.xsc">
+      <DependentUpon>ComedorDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="ComedorDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ComedorDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ComedorDataSet3.xss">
+      <DependentUpon>ComedorDataSet3.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
