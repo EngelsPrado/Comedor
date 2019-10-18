@@ -117,6 +117,49 @@ namespace Comedor
        
         }
 
+        public void obtenerTotalVenta(TextBox total )
+        {
+
+            SqlCommand cmd = new SqlCommand();
+
+
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "obtenerTotalVenta";
+            cmd.Connection = connect;
+
+
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+             total.Text= ""+(double)cmd.ExecuteScalar();
+        }
+
+        public void obtenerCambio(TextBox total,Double efectivo,String moneda)
+        {
+
+            SqlCommand cmd = new SqlCommand();
+            SqlParameter[] param = new SqlParameter[2];
+            param[0] = new SqlParameter("@efectivo", SqlDbType.Float);
+            param[0].Value = efectivo;
+            param[1] = new SqlParameter("@moneda", SqlDbType.Char);
+            param[1].Value = moneda;
+
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "Cambio";
+            cmd.Connection = connect;
+            cmd.Parameters.AddRange(param);
+
+            DataSet ds = new DataSet();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            da.Fill(ds);
+
+            total.Text = "" + (double)cmd.ExecuteScalar();
+        }
+
         public int iniciarSesion(String user,String pass)
         {
 

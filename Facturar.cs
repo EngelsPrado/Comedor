@@ -25,6 +25,9 @@ namespace Comedor
             this.con = con;
             this.usuario = usuario;
             InitializeComponent();
+            button4.Hide();
+            button2.Hide();
+            textBox1.Enabled = false;
       
         }
 
@@ -53,17 +56,21 @@ namespace Comedor
         private void button2_Click(object sender, EventArgs e)
         {
 
+            if (maskedTextBox1.Text.Equals(""))
+            {
+                MessageBox.Show("Ingrese el pago", "Alerta");
+                return;
+            }    
+
             con.facturar(usuario);//Creamos la factura
             int counter = 0;
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
 
-               
-                    Console.WriteLine("ENTRaaa");
-                if(dataGridView1.Rows[counter++].Cells["platillo"].Value
-            != null)
+                if(dataGridView1.Rows[counter++].Cells["platillo"].Value!= null)
                 {
-                    con.detalleFactura(row.Cells["platillo"].Value.ToString(), Int32.Parse(row.Cells["mesa"].Value.ToString()), 2);
+
+                    con.detalleFactura(row.Cells["platillo"].Value.ToString(), Int32.Parse(row.Cells["mesa"].Value.ToString()), Int32.Parse(row.Cells["cantidad"].Value.ToString()));
 
                 }
 
@@ -73,36 +80,79 @@ namespace Comedor
 
             }
 
-            int counter1 = 0;
-            foreach (DataGridViewRow row in dataGridView2.Rows)
+            //Si piden bebidas o un extra
+          
+                int counter1 = 0;
+                foreach (DataGridViewRow row in dataGridView2.Rows)
+                {
+
+
+                  
+                    if (dataGridView2.Rows[counter1++].Cells["Bebida"].Value != null)
+                    {
+
+
+                        con.detalleBebidas_Extras(row.Cells["Bebida"].Value.ToString(), Int32.Parse(row.Cells["cantidadR"].Value.ToString()), row.Cells["Extra"].Value.ToString(), Int32.Parse(row.Cells["cantidadE"].Value.ToString()));
+
+                    }
+
+
+
+
+
+                }
+
+             
+            con.obtenerTotalVenta(textBox1);
+            con.obtenerCambio( textBox2,Double.Parse( maskedTextBox1.Text),comboBox5.Text);
+            
+            if ( Double.Parse (textBox2.Text)<0)
             {
+                MessageBox.Show("Le faltan"+textBox2.Text, "Pago insuficiente");
+                button4.Show();
+                return;
+            } 
+            dataGridView1.Rows.Clear();
+            dataGridView2.Rows.Clear();
 
-
-                Console.WriteLine("ENTRaaa");
-                if (dataGridView2.Rows[counter1++].Cells["Bebida"].Value
-            != null)
-                {
-                      con.detalleBebidas_Extras(row.Cells["Bebida"].Value.ToString(),2, row.Cells["Extra"].Value.ToString(),2);
-                       
-                }
-
-
-
-
-
-            }
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            dataGridView1.Rows.Add(comboBox1.Text,comboBox4.Text);
-            dataGridView2.Rows.Add(comboBox2.Text, comboBox3.Text);
+
+            if (numericUpDown1.Value>0)
+                dataGridView1.Rows.Add(comboBox1.Text, comboBox4.Text, numericUpDown1.Value);
+
+            if (numericUpDown2.Value>0 || numericUpDown3.Value > 0)
+            {
+              dataGridView2.Rows.Add(comboBox2.Text, numericUpDown2.Value, comboBox3.Text, numericUpDown3.Value);
+            }
+
+            numericUpDown1.Value = 1;
+            numericUpDown2.Value = 0;
+            numericUpDown3.Value = 0;
+            button2.Show();
+
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             dataGridView1.Rows.RemoveAt(dataGridView1.CurrentRow.Index);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            con.obtenerCambio(textBox2, Double.Parse(maskedTextBox1.Text), comboBox5.Text);
+
+            if (Double.Parse(textBox2.Text) < 0)
+            {
+                MessageBox.Show("Le faltan" + textBox2.Text, "Pago insuficiente");
+                return;
+            }
+
+            dataGridView1.Rows.Clear();
+            dataGridView2.Rows.Clear();
         }
     }
 }
