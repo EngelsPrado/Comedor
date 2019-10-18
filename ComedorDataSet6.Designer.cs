@@ -20,9 +20,9 @@ namespace Comedor {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("ComedorDataSet3")]
+    [global::System.Xml.Serialization.XmlRootAttribute("ComedorDataSet6")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class ComedorDataSet3 : global::System.Data.DataSet {
+    public partial class ComedorDataSet6 : global::System.Data.DataSet {
         
         private listarExtrasDataTable tablelistarExtras;
         
@@ -30,7 +30,7 @@ namespace Comedor {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public ComedorDataSet3() {
+        public ComedorDataSet6() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace Comedor {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected ComedorDataSet3(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected ComedorDataSet6(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace Comedor {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            ComedorDataSet3 cln = ((ComedorDataSet3)(base.Clone()));
+            ComedorDataSet6 cln = ((ComedorDataSet6)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace Comedor {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "ComedorDataSet3";
+            this.DataSetName = "ComedorDataSet6";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/ComedorDataSet3.xsd";
+            this.Namespace = "http://tempuri.org/ComedorDataSet6.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tablelistarExtras = new listarExtrasDataTable();
@@ -225,7 +225,7 @@ namespace Comedor {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            ComedorDataSet3 ds = new ComedorDataSet3();
+            ComedorDataSet6 ds = new ComedorDataSet6();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -281,8 +281,6 @@ namespace Comedor {
             
             private global::System.Data.DataColumn columnnombre;
             
-            private global::System.Data.DataColumn columnidIngrediente;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public listarExtrasDataTable() {
@@ -326,14 +324,6 @@ namespace Comedor {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn idIngredienteColumn {
-                get {
-                    return this.columnidIngrediente;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -372,18 +362,10 @@ namespace Comedor {
             public listarExtrasRow AddlistarExtrasRow(string nombre) {
                 listarExtrasRow rowlistarExtrasRow = ((listarExtrasRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        nombre,
-                        null};
+                        nombre};
                 rowlistarExtrasRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowlistarExtrasRow);
                 return rowlistarExtrasRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public listarExtrasRow FindByidIngrediente(int idIngrediente) {
-                return ((listarExtrasRow)(this.Rows.Find(new object[] {
-                            idIngrediente})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -404,7 +386,6 @@ namespace Comedor {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
                 this.columnnombre = base.Columns["nombre"];
-                this.columnidIngrediente = base.Columns["idIngrediente"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -412,16 +393,8 @@ namespace Comedor {
             private void InitClass() {
                 this.columnnombre = new global::System.Data.DataColumn("nombre", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnombre);
-                this.columnidIngrediente = new global::System.Data.DataColumn("idIngrediente", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnidIngrediente);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnidIngrediente}, true));
                 this.columnnombre.AllowDBNull = false;
                 this.columnnombre.MaxLength = 60;
-                this.columnidIngrediente.AutoIncrement = true;
-                this.columnidIngrediente.AllowDBNull = false;
-                this.columnidIngrediente.ReadOnly = true;
-                this.columnidIngrediente.Unique = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -489,7 +462,7 @@ namespace Comedor {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                ComedorDataSet3 ds = new ComedorDataSet3();
+                ComedorDataSet6 ds = new ComedorDataSet6();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -572,17 +545,6 @@ namespace Comedor {
                     this[this.tablelistarExtras.nombreColumn] = value;
                 }
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int idIngrediente {
-                get {
-                    return ((int)(this[this.tablelistarExtras.idIngredienteColumn]));
-                }
-                set {
-                    this[this.tablelistarExtras.idIngredienteColumn] = value;
-                }
-            }
         }
         
         /// <summary>
@@ -620,7 +582,7 @@ namespace Comedor {
         }
     }
 }
-namespace Comedor.ComedorDataSet3TableAdapters {
+namespace Comedor.ComedorDataSet6TableAdapters {
     
     
     /// <summary>
@@ -745,7 +707,6 @@ namespace Comedor.ComedorDataSet3TableAdapters {
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "listarExtras";
             tableMapping.ColumnMappings.Add("nombre", "nombre");
-            tableMapping.ColumnMappings.Add("idIngrediente", "idIngrediente");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -753,7 +714,8 @@ namespace Comedor.ComedorDataSet3TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Comedor.Properties.Settings.Default.ComedorConnectionString;
+            this._connection.ConnectionString = "Data Source=tcp:comedor.database.windows.net,1433;Initial Catalog=Comedor;User ID" +
+                "=adm;Password=Upoliei*";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -771,7 +733,7 @@ namespace Comedor.ComedorDataSet3TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(ComedorDataSet3.listarExtrasDataTable dataTable) {
+        public virtual int Fill(ComedorDataSet6.listarExtrasDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -784,9 +746,9 @@ namespace Comedor.ComedorDataSet3TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual ComedorDataSet3.listarExtrasDataTable GetData() {
+        public virtual ComedorDataSet6.listarExtrasDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            ComedorDataSet3.listarExtrasDataTable dataTable = new ComedorDataSet3.listarExtrasDataTable();
+            ComedorDataSet6.listarExtrasDataTable dataTable = new ComedorDataSet6.listarExtrasDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -860,7 +822,7 @@ namespace Comedor.ComedorDataSet3TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(ComedorDataSet3 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(ComedorDataSet6 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -870,7 +832,7 @@ namespace Comedor.ComedorDataSet3TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(ComedorDataSet3 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(ComedorDataSet6 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -880,7 +842,7 @@ namespace Comedor.ComedorDataSet3TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(ComedorDataSet3 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(ComedorDataSet6 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             return result;
         }
@@ -914,7 +876,7 @@ namespace Comedor.ComedorDataSet3TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(ComedorDataSet3 dataSet) {
+        public virtual int UpdateAll(ComedorDataSet6 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

@@ -13,15 +13,16 @@ namespace Comedor
     public partial class Principal : Form
     {
         private Conectar con;
-
+        private String usuario;
         public Principal()
         {
             InitializeComponent();
         }
 
-        public Principal(Conectar con)
+        public Principal(Conectar con,String usuario)
         {
             this.con = con;
+            this.usuario = usuario;
             InitializeComponent();
         }
 
@@ -33,7 +34,7 @@ namespace Comedor
         private void facturarToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            Facturar f = new Facturar(con);
+            Facturar f = new Facturar(con , usuario);
             f.MdiParent = this;
             f.Show();
        

@@ -59,7 +59,7 @@ namespace Comedor
         private void bg_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
 
-            mDI = new Principal(con);
+            mDI = new Principal(con,textBox1.Text);
 
             mDI.Show();
             this.Hide();

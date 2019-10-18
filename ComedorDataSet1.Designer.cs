@@ -24,7 +24,7 @@ namespace Comedor {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class ComedorDataSet1 : global::System.Data.DataSet {
         
-        private listarExtrasDataTable tablelistarExtras;
+        private verPlatosDataTable tableverPlatos;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -54,8 +54,8 @@ namespace Comedor {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["listarExtras"] != null)) {
-                    base.Tables.Add(new listarExtrasDataTable(ds.Tables["listarExtras"]));
+                if ((ds.Tables["verPlatos"] != null)) {
+                    base.Tables.Add(new verPlatosDataTable(ds.Tables["verPlatos"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace Comedor {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public listarExtrasDataTable listarExtras {
+        public verPlatosDataTable verPlatos {
             get {
-                return this.tablelistarExtras;
+                return this.tableverPlatos;
             }
         }
         
@@ -152,8 +152,8 @@ namespace Comedor {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["listarExtras"] != null)) {
-                    base.Tables.Add(new listarExtrasDataTable(ds.Tables["listarExtras"]));
+                if ((ds.Tables["verPlatos"] != null)) {
+                    base.Tables.Add(new verPlatosDataTable(ds.Tables["verPlatos"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace Comedor {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tablelistarExtras = ((listarExtrasDataTable)(base.Tables["listarExtras"]));
+            this.tableverPlatos = ((verPlatosDataTable)(base.Tables["verPlatos"]));
             if ((initTable == true)) {
-                if ((this.tablelistarExtras != null)) {
-                    this.tablelistarExtras.InitVars();
+                if ((this.tableverPlatos != null)) {
+                    this.tableverPlatos.InitVars();
                 }
             }
         }
@@ -204,13 +204,13 @@ namespace Comedor {
             this.Namespace = "http://tempuri.org/ComedorDataSet1.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tablelistarExtras = new listarExtrasDataTable();
-            base.Tables.Add(this.tablelistarExtras);
+            this.tableverPlatos = new verPlatosDataTable();
+            base.Tables.Add(this.tableverPlatos);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializelistarExtras() {
+        private bool ShouldSerializeverPlatos() {
             return false;
         }
         
@@ -270,21 +270,23 @@ namespace Comedor {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void listarExtrasRowChangeEventHandler(object sender, listarExtrasRowChangeEvent e);
+        public delegate void verPlatosRowChangeEventHandler(object sender, verPlatosRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class listarExtrasDataTable : global::System.Data.TypedTableBase<listarExtrasRow> {
+        public partial class verPlatosDataTable : global::System.Data.TypedTableBase<verPlatosRow> {
             
-            private global::System.Data.DataColumn columnnombre;
+            private global::System.Data.DataColumn columnNombre;
+            
+            private global::System.Data.DataColumn columnidPlato;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public listarExtrasDataTable() {
-                this.TableName = "listarExtras";
+            public verPlatosDataTable() {
+                this.TableName = "verPlatos";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -292,7 +294,7 @@ namespace Comedor {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal listarExtrasDataTable(global::System.Data.DataTable table) {
+            internal verPlatosDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -309,16 +311,24 @@ namespace Comedor {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected listarExtrasDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected verPlatosDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn nombreColumn {
+            public global::System.Data.DataColumn NombreColumn {
                 get {
-                    return this.columnnombre;
+                    return this.columnNombre;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn idPlatoColumn {
+                get {
+                    return this.columnidPlato;
                 }
             }
             
@@ -333,45 +343,53 @@ namespace Comedor {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public listarExtrasRow this[int index] {
+            public verPlatosRow this[int index] {
                 get {
-                    return ((listarExtrasRow)(this.Rows[index]));
+                    return ((verPlatosRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event listarExtrasRowChangeEventHandler listarExtrasRowChanging;
+            public event verPlatosRowChangeEventHandler verPlatosRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event listarExtrasRowChangeEventHandler listarExtrasRowChanged;
+            public event verPlatosRowChangeEventHandler verPlatosRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event listarExtrasRowChangeEventHandler listarExtrasRowDeleting;
+            public event verPlatosRowChangeEventHandler verPlatosRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event listarExtrasRowChangeEventHandler listarExtrasRowDeleted;
+            public event verPlatosRowChangeEventHandler verPlatosRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddlistarExtrasRow(listarExtrasRow row) {
+            public void AddverPlatosRow(verPlatosRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public listarExtrasRow AddlistarExtrasRow(string nombre) {
-                listarExtrasRow rowlistarExtrasRow = ((listarExtrasRow)(this.NewRow()));
+            public verPlatosRow AddverPlatosRow(string Nombre) {
+                verPlatosRow rowverPlatosRow = ((verPlatosRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        nombre};
-                rowlistarExtrasRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowlistarExtrasRow);
-                return rowlistarExtrasRow;
+                        Nombre,
+                        null};
+                rowverPlatosRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowverPlatosRow);
+                return rowverPlatosRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public verPlatosRow FindByidPlato(int idPlato) {
+                return ((verPlatosRow)(this.Rows.Find(new object[] {
+                            idPlato})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                listarExtrasDataTable cln = ((listarExtrasDataTable)(base.Clone()));
+                verPlatosDataTable cln = ((verPlatosDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -379,48 +397,57 @@ namespace Comedor {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new listarExtrasDataTable();
+                return new verPlatosDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnnombre = base.Columns["nombre"];
+                this.columnNombre = base.Columns["Nombre"];
+                this.columnidPlato = base.Columns["idPlato"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnnombre = new global::System.Data.DataColumn("nombre", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnombre);
-                this.columnnombre.AllowDBNull = false;
-                this.columnnombre.MaxLength = 60;
+                this.columnNombre = new global::System.Data.DataColumn("Nombre", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNombre);
+                this.columnidPlato = new global::System.Data.DataColumn("idPlato", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnidPlato);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnidPlato}, true));
+                this.columnNombre.AllowDBNull = false;
+                this.columnNombre.MaxLength = 100;
+                this.columnidPlato.AutoIncrement = true;
+                this.columnidPlato.AllowDBNull = false;
+                this.columnidPlato.ReadOnly = true;
+                this.columnidPlato.Unique = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public listarExtrasRow NewlistarExtrasRow() {
-                return ((listarExtrasRow)(this.NewRow()));
+            public verPlatosRow NewverPlatosRow() {
+                return ((verPlatosRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new listarExtrasRow(builder);
+                return new verPlatosRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(listarExtrasRow);
+                return typeof(verPlatosRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.listarExtrasRowChanged != null)) {
-                    this.listarExtrasRowChanged(this, new listarExtrasRowChangeEvent(((listarExtrasRow)(e.Row)), e.Action));
+                if ((this.verPlatosRowChanged != null)) {
+                    this.verPlatosRowChanged(this, new verPlatosRowChangeEvent(((verPlatosRow)(e.Row)), e.Action));
                 }
             }
             
@@ -428,8 +455,8 @@ namespace Comedor {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.listarExtrasRowChanging != null)) {
-                    this.listarExtrasRowChanging(this, new listarExtrasRowChangeEvent(((listarExtrasRow)(e.Row)), e.Action));
+                if ((this.verPlatosRowChanging != null)) {
+                    this.verPlatosRowChanging(this, new verPlatosRowChangeEvent(((verPlatosRow)(e.Row)), e.Action));
                 }
             }
             
@@ -437,8 +464,8 @@ namespace Comedor {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.listarExtrasRowDeleted != null)) {
-                    this.listarExtrasRowDeleted(this, new listarExtrasRowChangeEvent(((listarExtrasRow)(e.Row)), e.Action));
+                if ((this.verPlatosRowDeleted != null)) {
+                    this.verPlatosRowDeleted(this, new verPlatosRowChangeEvent(((verPlatosRow)(e.Row)), e.Action));
                 }
             }
             
@@ -446,14 +473,14 @@ namespace Comedor {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.listarExtrasRowDeleting != null)) {
-                    this.listarExtrasRowDeleting(this, new listarExtrasRowChangeEvent(((listarExtrasRow)(e.Row)), e.Action));
+                if ((this.verPlatosRowDeleting != null)) {
+                    this.verPlatosRowDeleting(this, new verPlatosRowChangeEvent(((verPlatosRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemovelistarExtrasRow(listarExtrasRow row) {
+            public void RemoveverPlatosRow(verPlatosRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -480,7 +507,7 @@ namespace Comedor {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "listarExtrasDataTable";
+                attribute2.FixedValue = "verPlatosDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -524,25 +551,36 @@ namespace Comedor {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class listarExtrasRow : global::System.Data.DataRow {
+        public partial class verPlatosRow : global::System.Data.DataRow {
             
-            private listarExtrasDataTable tablelistarExtras;
+            private verPlatosDataTable tableverPlatos;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal listarExtrasRow(global::System.Data.DataRowBuilder rb) : 
+            internal verPlatosRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tablelistarExtras = ((listarExtrasDataTable)(this.Table));
+                this.tableverPlatos = ((verPlatosDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string nombre {
+            public string Nombre {
                 get {
-                    return ((string)(this[this.tablelistarExtras.nombreColumn]));
+                    return ((string)(this[this.tableverPlatos.NombreColumn]));
                 }
                 set {
-                    this[this.tablelistarExtras.nombreColumn] = value;
+                    this[this.tableverPlatos.NombreColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int idPlato {
+                get {
+                    return ((int)(this[this.tableverPlatos.idPlatoColumn]));
+                }
+                set {
+                    this[this.tableverPlatos.idPlatoColumn] = value;
                 }
             }
         }
@@ -551,22 +589,22 @@ namespace Comedor {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class listarExtrasRowChangeEvent : global::System.EventArgs {
+        public class verPlatosRowChangeEvent : global::System.EventArgs {
             
-            private listarExtrasRow eventRow;
+            private verPlatosRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public listarExtrasRowChangeEvent(listarExtrasRow row, global::System.Data.DataRowAction action) {
+            public verPlatosRowChangeEvent(verPlatosRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public listarExtrasRow Row {
+            public verPlatosRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -594,7 +632,7 @@ namespace Comedor.ComedorDataSet1TableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class listarExtrasTableAdapter : global::System.ComponentModel.Component {
+    public partial class verPlatosTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -608,7 +646,7 @@ namespace Comedor.ComedorDataSet1TableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public listarExtrasTableAdapter() {
+        public verPlatosTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -705,8 +743,9 @@ namespace Comedor.ComedorDataSet1TableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "listarExtras";
-            tableMapping.ColumnMappings.Add("nombre", "nombre");
+            tableMapping.DataSetTable = "verPlatos";
+            tableMapping.ColumnMappings.Add("Nombre", "Nombre");
+            tableMapping.ColumnMappings.Add("idPlato", "idPlato");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -714,7 +753,7 @@ namespace Comedor.ComedorDataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=DESKTOP-SAH83BP;Initial Catalog=Comedor;Integrated Security=True";
+            this._connection.ConnectionString = global::Comedor.Properties.Settings.Default.ComedorConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -723,7 +762,7 @@ namespace Comedor.ComedorDataSet1TableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.listarExtras";
+            this._commandCollection[0].CommandText = "dbo.verPlatos";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
@@ -732,7 +771,7 @@ namespace Comedor.ComedorDataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(ComedorDataSet1.listarExtrasDataTable dataTable) {
+        public virtual int Fill(ComedorDataSet1.verPlatosDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -745,9 +784,9 @@ namespace Comedor.ComedorDataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual ComedorDataSet1.listarExtrasDataTable GetData() {
+        public virtual ComedorDataSet1.verPlatosDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            ComedorDataSet1.listarExtrasDataTable dataTable = new ComedorDataSet1.listarExtrasDataTable();
+            ComedorDataSet1.verPlatosDataTable dataTable = new ComedorDataSet1.verPlatosDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }

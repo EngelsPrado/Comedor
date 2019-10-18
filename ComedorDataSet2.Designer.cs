@@ -24,7 +24,7 @@ namespace Comedor {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class ComedorDataSet2 : global::System.Data.DataSet {
         
-        private listarMesasDataTable tablelistarMesas;
+        private listarBebidasDataTable tablelistarBebidas;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -54,8 +54,8 @@ namespace Comedor {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["listarMesas"] != null)) {
-                    base.Tables.Add(new listarMesasDataTable(ds.Tables["listarMesas"]));
+                if ((ds.Tables["listarBebidas"] != null)) {
+                    base.Tables.Add(new listarBebidasDataTable(ds.Tables["listarBebidas"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace Comedor {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public listarMesasDataTable listarMesas {
+        public listarBebidasDataTable listarBebidas {
             get {
-                return this.tablelistarMesas;
+                return this.tablelistarBebidas;
             }
         }
         
@@ -152,8 +152,8 @@ namespace Comedor {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["listarMesas"] != null)) {
-                    base.Tables.Add(new listarMesasDataTable(ds.Tables["listarMesas"]));
+                if ((ds.Tables["listarBebidas"] != null)) {
+                    base.Tables.Add(new listarBebidasDataTable(ds.Tables["listarBebidas"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace Comedor {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tablelistarMesas = ((listarMesasDataTable)(base.Tables["listarMesas"]));
+            this.tablelistarBebidas = ((listarBebidasDataTable)(base.Tables["listarBebidas"]));
             if ((initTable == true)) {
-                if ((this.tablelistarMesas != null)) {
-                    this.tablelistarMesas.InitVars();
+                if ((this.tablelistarBebidas != null)) {
+                    this.tablelistarBebidas.InitVars();
                 }
             }
         }
@@ -204,13 +204,13 @@ namespace Comedor {
             this.Namespace = "http://tempuri.org/ComedorDataSet2.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tablelistarMesas = new listarMesasDataTable();
-            base.Tables.Add(this.tablelistarMesas);
+            this.tablelistarBebidas = new listarBebidasDataTable();
+            base.Tables.Add(this.tablelistarBebidas);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializelistarMesas() {
+        private bool ShouldSerializelistarBebidas() {
             return false;
         }
         
@@ -270,21 +270,23 @@ namespace Comedor {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void listarMesasRowChangeEventHandler(object sender, listarMesasRowChangeEvent e);
+        public delegate void listarBebidasRowChangeEventHandler(object sender, listarBebidasRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class listarMesasDataTable : global::System.Data.TypedTableBase<listarMesasRow> {
+        public partial class listarBebidasDataTable : global::System.Data.TypedTableBase<listarBebidasRow> {
             
-            private global::System.Data.DataColumn columnidMesa;
+            private global::System.Data.DataColumn columnNombre;
+            
+            private global::System.Data.DataColumn columnidRefresco;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public listarMesasDataTable() {
-                this.TableName = "listarMesas";
+            public listarBebidasDataTable() {
+                this.TableName = "listarBebidas";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -292,7 +294,7 @@ namespace Comedor {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal listarMesasDataTable(global::System.Data.DataTable table) {
+            internal listarBebidasDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -309,16 +311,24 @@ namespace Comedor {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected listarMesasDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected listarBebidasDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn idMesaColumn {
+            public global::System.Data.DataColumn NombreColumn {
                 get {
-                    return this.columnidMesa;
+                    return this.columnNombre;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn idRefrescoColumn {
+                get {
+                    return this.columnidRefresco;
                 }
             }
             
@@ -333,52 +343,53 @@ namespace Comedor {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public listarMesasRow this[int index] {
+            public listarBebidasRow this[int index] {
                 get {
-                    return ((listarMesasRow)(this.Rows[index]));
+                    return ((listarBebidasRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event listarMesasRowChangeEventHandler listarMesasRowChanging;
+            public event listarBebidasRowChangeEventHandler listarBebidasRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event listarMesasRowChangeEventHandler listarMesasRowChanged;
+            public event listarBebidasRowChangeEventHandler listarBebidasRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event listarMesasRowChangeEventHandler listarMesasRowDeleting;
+            public event listarBebidasRowChangeEventHandler listarBebidasRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event listarMesasRowChangeEventHandler listarMesasRowDeleted;
+            public event listarBebidasRowChangeEventHandler listarBebidasRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddlistarMesasRow(listarMesasRow row) {
+            public void AddlistarBebidasRow(listarBebidasRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public listarMesasRow AddlistarMesasRow() {
-                listarMesasRow rowlistarMesasRow = ((listarMesasRow)(this.NewRow()));
+            public listarBebidasRow AddlistarBebidasRow(string Nombre) {
+                listarBebidasRow rowlistarBebidasRow = ((listarBebidasRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
+                        Nombre,
                         null};
-                rowlistarMesasRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowlistarMesasRow);
-                return rowlistarMesasRow;
+                rowlistarBebidasRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowlistarBebidasRow);
+                return rowlistarBebidasRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public listarMesasRow FindByidMesa(int idMesa) {
-                return ((listarMesasRow)(this.Rows.Find(new object[] {
-                            idMesa})));
+            public listarBebidasRow FindByidRefresco(int idRefresco) {
+                return ((listarBebidasRow)(this.Rows.Find(new object[] {
+                            idRefresco})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                listarMesasDataTable cln = ((listarMesasDataTable)(base.Clone()));
+                listarBebidasDataTable cln = ((listarBebidasDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -386,52 +397,57 @@ namespace Comedor {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new listarMesasDataTable();
+                return new listarBebidasDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnidMesa = base.Columns["idMesa"];
+                this.columnNombre = base.Columns["Nombre"];
+                this.columnidRefresco = base.Columns["idRefresco"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnidMesa = new global::System.Data.DataColumn("idMesa", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnidMesa);
+                this.columnNombre = new global::System.Data.DataColumn("Nombre", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNombre);
+                this.columnidRefresco = new global::System.Data.DataColumn("idRefresco", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnidRefresco);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnidMesa}, true));
-                this.columnidMesa.AutoIncrement = true;
-                this.columnidMesa.AllowDBNull = false;
-                this.columnidMesa.ReadOnly = true;
-                this.columnidMesa.Unique = true;
+                                this.columnidRefresco}, true));
+                this.columnNombre.AllowDBNull = false;
+                this.columnNombre.MaxLength = 70;
+                this.columnidRefresco.AutoIncrement = true;
+                this.columnidRefresco.AllowDBNull = false;
+                this.columnidRefresco.ReadOnly = true;
+                this.columnidRefresco.Unique = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public listarMesasRow NewlistarMesasRow() {
-                return ((listarMesasRow)(this.NewRow()));
+            public listarBebidasRow NewlistarBebidasRow() {
+                return ((listarBebidasRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new listarMesasRow(builder);
+                return new listarBebidasRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(listarMesasRow);
+                return typeof(listarBebidasRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.listarMesasRowChanged != null)) {
-                    this.listarMesasRowChanged(this, new listarMesasRowChangeEvent(((listarMesasRow)(e.Row)), e.Action));
+                if ((this.listarBebidasRowChanged != null)) {
+                    this.listarBebidasRowChanged(this, new listarBebidasRowChangeEvent(((listarBebidasRow)(e.Row)), e.Action));
                 }
             }
             
@@ -439,8 +455,8 @@ namespace Comedor {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.listarMesasRowChanging != null)) {
-                    this.listarMesasRowChanging(this, new listarMesasRowChangeEvent(((listarMesasRow)(e.Row)), e.Action));
+                if ((this.listarBebidasRowChanging != null)) {
+                    this.listarBebidasRowChanging(this, new listarBebidasRowChangeEvent(((listarBebidasRow)(e.Row)), e.Action));
                 }
             }
             
@@ -448,8 +464,8 @@ namespace Comedor {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.listarMesasRowDeleted != null)) {
-                    this.listarMesasRowDeleted(this, new listarMesasRowChangeEvent(((listarMesasRow)(e.Row)), e.Action));
+                if ((this.listarBebidasRowDeleted != null)) {
+                    this.listarBebidasRowDeleted(this, new listarBebidasRowChangeEvent(((listarBebidasRow)(e.Row)), e.Action));
                 }
             }
             
@@ -457,14 +473,14 @@ namespace Comedor {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.listarMesasRowDeleting != null)) {
-                    this.listarMesasRowDeleting(this, new listarMesasRowChangeEvent(((listarMesasRow)(e.Row)), e.Action));
+                if ((this.listarBebidasRowDeleting != null)) {
+                    this.listarBebidasRowDeleting(this, new listarBebidasRowChangeEvent(((listarBebidasRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemovelistarMesasRow(listarMesasRow row) {
+            public void RemovelistarBebidasRow(listarBebidasRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -491,7 +507,7 @@ namespace Comedor {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "listarMesasDataTable";
+                attribute2.FixedValue = "listarBebidasDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -535,25 +551,36 @@ namespace Comedor {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class listarMesasRow : global::System.Data.DataRow {
+        public partial class listarBebidasRow : global::System.Data.DataRow {
             
-            private listarMesasDataTable tablelistarMesas;
+            private listarBebidasDataTable tablelistarBebidas;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal listarMesasRow(global::System.Data.DataRowBuilder rb) : 
+            internal listarBebidasRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tablelistarMesas = ((listarMesasDataTable)(this.Table));
+                this.tablelistarBebidas = ((listarBebidasDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int idMesa {
+            public string Nombre {
                 get {
-                    return ((int)(this[this.tablelistarMesas.idMesaColumn]));
+                    return ((string)(this[this.tablelistarBebidas.NombreColumn]));
                 }
                 set {
-                    this[this.tablelistarMesas.idMesaColumn] = value;
+                    this[this.tablelistarBebidas.NombreColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int idRefresco {
+                get {
+                    return ((int)(this[this.tablelistarBebidas.idRefrescoColumn]));
+                }
+                set {
+                    this[this.tablelistarBebidas.idRefrescoColumn] = value;
                 }
             }
         }
@@ -562,22 +589,22 @@ namespace Comedor {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class listarMesasRowChangeEvent : global::System.EventArgs {
+        public class listarBebidasRowChangeEvent : global::System.EventArgs {
             
-            private listarMesasRow eventRow;
+            private listarBebidasRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public listarMesasRowChangeEvent(listarMesasRow row, global::System.Data.DataRowAction action) {
+            public listarBebidasRowChangeEvent(listarBebidasRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public listarMesasRow Row {
+            public listarBebidasRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -605,7 +632,7 @@ namespace Comedor.ComedorDataSet2TableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class listarMesasTableAdapter : global::System.ComponentModel.Component {
+    public partial class listarBebidasTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -619,7 +646,7 @@ namespace Comedor.ComedorDataSet2TableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public listarMesasTableAdapter() {
+        public listarBebidasTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -716,9 +743,9 @@ namespace Comedor.ComedorDataSet2TableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "listarMesas";
-            tableMapping.ColumnMappings.Add("idMesa", "idMesa");
-            tableMapping.ColumnMappings.Add("sillas", "sillas");
+            tableMapping.DataSetTable = "listarBebidas";
+            tableMapping.ColumnMappings.Add("Nombre", "Nombre");
+            tableMapping.ColumnMappings.Add("idRefresco", "idRefresco");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -726,7 +753,7 @@ namespace Comedor.ComedorDataSet2TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=DESKTOP-SAH83BP;Initial Catalog=Comedor;Integrated Security=True";
+            this._connection.ConnectionString = global::Comedor.Properties.Settings.Default.ComedorConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -735,7 +762,7 @@ namespace Comedor.ComedorDataSet2TableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.listarMesas";
+            this._commandCollection[0].CommandText = "dbo.listarBebidas";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
@@ -744,7 +771,7 @@ namespace Comedor.ComedorDataSet2TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(ComedorDataSet2.listarMesasDataTable dataTable) {
+        public virtual int Fill(ComedorDataSet2.listarBebidasDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -757,9 +784,9 @@ namespace Comedor.ComedorDataSet2TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual ComedorDataSet2.listarMesasDataTable GetData() {
+        public virtual ComedorDataSet2.listarBebidasDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            ComedorDataSet2.listarMesasDataTable dataTable = new ComedorDataSet2.listarMesasDataTable();
+            ComedorDataSet2.listarBebidasDataTable dataTable = new ComedorDataSet2.listarBebidasDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
