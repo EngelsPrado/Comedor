@@ -68,10 +68,30 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ComedorDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ComedorDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ComedorDataSet10.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ComedorDataSet11.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ComedorDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ComedorDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ComedorDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ComedorDataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ComedorDataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ComedorDataSet14.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ComedorDataSet14.xsd</DependentUpon>
     </Compile>
     <Compile Include="ComedorDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -82,6 +102,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ComedorDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ComedorDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ComedorDataSet4.xsd</DependentUpon>
     </Compile>
     <Compile Include="ComedorDataSet5.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -98,6 +123,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ComedorDataSet7.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ComedorDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ComedorDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ComedorDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ComedorDataSet9.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Conectar.cs" />
     <Compile Include="Encrypt.cs" />
     <Compile Include="Facturar.cs">
@@ -112,6 +147,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GestionarPRI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionarPRI.Designer.cs">
+      <DependentUpon>GestionarPRI.cs</DependentUpon>
+    </Compile>
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,11 +162,20 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="UsuariosyNominas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsuariosyNominas.Designer.cs">
+      <DependentUpon>UsuariosyNominas.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Facturar.resx">
       <DependentUpon>Facturar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionarPRI.resx">
+      <DependentUpon>GestionarPRI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
@@ -139,6 +189,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UsuariosyNominas.resx">
+      <DependentUpon>UsuariosyNominas.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="ComedorDataSet.xsc">
       <DependentUpon>ComedorDataSet.xsd</DependentUpon>
     </None>
@@ -161,6 +214,17 @@
     <None Include="ComedorDataSet1.xss">
       <DependentUpon>ComedorDataSet1.xsd</DependentUpon>
     </None>
+    <None Include="ComedorDataSet10.xsc">
+      <DependentUpon>ComedorDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="ComedorDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ComedorDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ComedorDataSet10.xss">
+      <DependentUpon>ComedorDataSet10.xsd</DependentUpon>
+    </None>
     <None Include="ComedorDataSet11.xsc">
       <DependentUpon>ComedorDataSet11.xsd</DependentUpon>
     </None>
@@ -171,6 +235,39 @@
     </None>
     <None Include="ComedorDataSet11.xss">
       <DependentUpon>ComedorDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="ComedorDataSet12.xsc">
+      <DependentUpon>ComedorDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="ComedorDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ComedorDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ComedorDataSet12.xss">
+      <DependentUpon>ComedorDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="ComedorDataSet13.xsc">
+      <DependentUpon>ComedorDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="ComedorDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ComedorDataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ComedorDataSet13.xss">
+      <DependentUpon>ComedorDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="ComedorDataSet14.xsc">
+      <DependentUpon>ComedorDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="ComedorDataSet14.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ComedorDataSet14.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ComedorDataSet14.xss">
+      <DependentUpon>ComedorDataSet14.xsd</DependentUpon>
     </None>
     <None Include="ComedorDataSet2.xsc">
       <DependentUpon>ComedorDataSet2.xsd</DependentUpon>
@@ -193,6 +290,17 @@
     </None>
     <None Include="ComedorDataSet3.xss">
       <DependentUpon>ComedorDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="ComedorDataSet4.xsc">
+      <DependentUpon>ComedorDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="ComedorDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ComedorDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ComedorDataSet4.xss">
+      <DependentUpon>ComedorDataSet4.xsd</DependentUpon>
     </None>
     <None Include="ComedorDataSet5.xsc">
       <DependentUpon>ComedorDataSet5.xsd</DependentUpon>
@@ -226,6 +334,28 @@
     </None>
     <None Include="ComedorDataSet7.xss">
       <DependentUpon>ComedorDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="ComedorDataSet8.xsc">
+      <DependentUpon>ComedorDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="ComedorDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ComedorDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ComedorDataSet8.xss">
+      <DependentUpon>ComedorDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="ComedorDataSet9.xsc">
+      <DependentUpon>ComedorDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="ComedorDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ComedorDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ComedorDataSet9.xss">
+      <DependentUpon>ComedorDataSet9.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

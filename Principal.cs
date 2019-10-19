@@ -40,5 +40,21 @@ namespace Comedor
        
 
         }
+
+        private void platosIngredientesRefrescosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GestionarPRI p = new GestionarPRI();
+            p.MdiParent = this;
+            p.Show();
+
+
+        }
+
+        private void usuariosYNominasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UsuariosyNominas un = new UsuariosyNominas();
+            un.MdiParent = this;
+            un.Show();
+        }
     }
 }
